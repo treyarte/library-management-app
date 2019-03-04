@@ -16,7 +16,8 @@ namespace library_management_app.Data
             new Book()
             {
                 Id = 1,
-                Title = "Sapiens: A Brief History of Humankind",
+                //TODO deal with colons or special characters in title for images name
+                Title = "Sapiens A Brief History of Humankind",
                 DescriptionHtml = "\"A Brief History of Humankind is a book by Yuval Noah Harari first published in Hebrew in Israel in 2011," +
                 " and in English in 2014. The book surveys the history of humankind from the evolution of archaic human species in the Stone Age up " +
                 "to the twenty-first century, focusing on Homo sapiens.\" - Wikipedia",
@@ -30,7 +31,7 @@ namespace library_management_app.Data
             new Book()
             {
                 Id = 2,
-                Title = "Cosmos: A Personal Voyage",
+                Title = "Cosmos A Personal Voyage",
                 DescriptionHtml = "\"Cosmos is a 1980 popular science book by astronomer and Pulitzer Prize-winning author Carl Sagan. Its 13 illustrated " +
                                     "chapters, corresponding to the 13 episodes of the Cosmos TV series, which the book was co-developed with and intended to complement," +
                                     " explore the mutual development of science and civilization.\" - Wikipedia",
