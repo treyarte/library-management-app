@@ -6,20 +6,39 @@
 
 <h2>@ViewBag.Title</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <div class="row">
-    @foreach (var book in Model)
-    {
-        <div class="col-md-3">
-            <div>
-                @book.Title
-            </div>
+    <div class="col-md-10">
+        <table class="table-hover">
+           
+            <tr>
+                <th>
+                   <strong>Title</strong> 
+                </th>
+                <th>
+                    <strong>Description</strong> 
+                </th>
+                <th>
+                    <strong>Favorite</strong>
+                </th>
+            </tr>
+                    @foreach (var book in Model)
+                    {
+                        //TODO css with cards onhover show details and on click take to show page.
+                        <tr>
+                        <th>
+                            @book.Title
+                        </th>
+                        <th>
+                            @book.DescriptionHtml
+                        </th>
+                        <th>
+                            @book.Favorite
+                        </th>
 
+
+                        </tr>
+                    }
+                
+                </table>
         </div>
-    }
-
-
-
-</div>
+    </div>

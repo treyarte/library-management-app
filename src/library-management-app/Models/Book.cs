@@ -12,5 +12,13 @@ namespace library_management_app.Models
         public string DescriptionHtml { get; set; }
         public Author[] Author { get; set; }
         public bool Favorite { get; set; }
+
+       public string CoverImage
+        {
+            get
+            {
+                return Title.Replace(" ", "_") + ".jpg";
+            }
+        }
     }
 }
