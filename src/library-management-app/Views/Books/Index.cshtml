@@ -1,0 +1,25 @@
+﻿@model library_management_app.Models.Book[]
+
+@{
+    ViewBag.Title = "Books";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="row">
+    @foreach (var book in Model)
+    {
+        <div class="col-md-3">
+            <div>
+                @book.Title
+            </div>
+
+        </div>
+    }
+
+
+
+</div>

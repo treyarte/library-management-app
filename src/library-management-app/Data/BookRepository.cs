@@ -8,6 +8,8 @@ namespace library_management_app.Data
 {
     public class BookRepository
     {
+        //A list of books that is currently holding book data
+        //TODO get this data from a database or api
         private static Book[] _books = new Book[]
         {
 
@@ -54,5 +56,29 @@ namespace library_management_app.Data
                 Favorite = true
             }
         };
+
+        //return an array of books for the index page mainly.
+        public Book[] GetBooks()
+        {
+            return _books;
+        }
+
+        //find a single instance of a book with a matching id.
+        //TODO handle the error for when the id does not exist.
+        public Book GetBook(int id)
+        {
+            Book bookToReturn = null;
+            
+            foreach(var book in _books)
+            {
+                if (book.Id == id)
+                {
+                    bookToReturn = book;
+                    break;
+                }
+
+            }
+            return bookToReturn;
+        }
     }
 }
